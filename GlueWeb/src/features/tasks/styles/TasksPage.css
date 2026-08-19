@@ -1,0 +1,176 @@
+.tasks-feature-page {
+  height: 100%;
+  min-height: 0;
+}
+
+.tasks-page-shell {
+  height: 100%;
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+.tasks-page-shell__container {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tasks-page-shell__header {
+  height: auto;
+  min-height: auto;
+  padding: 0;
+  flex: 0 0 auto;
+  overflow: visible;
+}
+
+
+/* 树状组件 */
+.tasks-page-shell__sidebar{
+  padding: 0; 
+  height: 100%;
+  overflow: auto;
+  background-color: var(--glue-container-bg-color);
+  border-radius: var(--glue-container-border-radius);
+}
+
+.tasks-sidebar-card__body :is(.el-tree) {
+  background: transparent;
+}
+
+.tasks-sidebar-card__body :is(.el-tree-node__content) {
+  height: auto;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.tasks-sidebar-card__body :is(.el-tree-node__content:hover) {
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.tasks-sidebar-card__body :is(.el-tree--highlight-current .el-tree-node.is-current > .el-tree-node__content) {
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.tasks-tree-node {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 12px;
+  padding: 6px 10px;
+  box-sizing: border-box;
+}
+
+.tasks-tree-node__label {
+  min-width: 0;
+  flex: 1;
+  color: #334155;
+}
+
+.tasks-tree-node__count {
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+/* 编辑页面 */
+.tasks-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 0;
+  height: 100%;
+}
+
+.tasks-editor__topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tasks-editor__topbar-spacer {
+  flex: 1;
+  min-width: 0;
+}
+
+.tasks-editor__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.tasks-editor__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 0;
+}
+
+.tasks-editor-section {
+  border-radius: var(--glue-container-border-radius);
+  background: var(--glue-container-bg-color);
+  padding: 18px;
+}
+
+.tasks-editor__title-item {
+  margin-bottom: 18px;
+}
+
+.tasks-editor__title-item .el-form-item__label {
+  display: none;
+}
+
+.tasks-editor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.tasks-progress-field {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-width: 0;
+}
+
+.tasks-progress-field .el-slider {
+  flex: 1;
+  min-width: 0;
+}
+
+.tasks-progress-field__value {
+  flex-shrink: 0;
+}
+
+.tasks-reminder-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .tasks-editor__topbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .tasks-editor__actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .tasks-editor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.glue-toolbar-view-trigger.is-active {
+  background: rgba(59, 130, 246, 0.14);
+  color: #2563eb;
+  font-weight: 600;
+}

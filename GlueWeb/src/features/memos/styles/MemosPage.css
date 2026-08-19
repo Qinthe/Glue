@@ -1,0 +1,40 @@
+.memos-feature-page {
+  height: 100%;
+  min-height: 0;
+}
+
+.memos-page-shell {
+  height: 100%;
+  min-height: 0;
+  overflow: visible;
+}
+
+.memos-page-shell__content {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.memos-page-shell__container {
+  display: flex;
+  gap: 10px;
+  min-height: 0;
+  height: 100%;
+}
+
+.memos-page-shell__aside {
+  min-height: 0;
+  padding-right: 0;
+}
+
+.memos-page-shell__main {
+  min-height: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+@media (max-width: 960px) {
+  .memos-page-shell__container {
+    flex-direction: column;
+  }
+}

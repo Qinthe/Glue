@@ -1,0 +1,61 @@
+:root {
+    /* Background */
+    --glue-bg-color: #ffffff;
+    --glue-container-bg-color: #f9fafb;
+    --glue-container-hover-bg-color: #f3f6fb;
+    --glue-switch-bg-color: #ededed;
+
+    /* Text */
+    --glue-text-color: #000000;
+    --glue-subtext-text-color: #64748b;
+    --glue-subtext_1-text-color: #94a3b8;
+
+    /* Border */
+    --glue-container-border-color: #dbdee3;
+
+    /* Layout */
+    --glue-sidebar-width: 240px;
+    --glue-sidebar-collapsed-width: 70px;
+
+    /* Input */
+    --glue-input-border-color: #dbdee3;
+    --glue-input-height: 36px;
+    --glue-input-border-radius: 14px;
+
+    /* Container */
+    --glue-container-border-radius: 12px;
+
+    /* Font Size */
+    --glue-text_1-font-size: 16px;
+    --glue-text_2-font-size: 14px;
+    --glue-text_3-font-size: 12px;
+    --glue-text_4-font-size: 12px;
+
+    /* Link page */
+    --glue-card-gap: 16px;
+    --glue-card-padding: 14px 16px;
+    --glue-toolbar-gap: 12px;
+    --glue-drawer-width: 420px;
+
+    /* Button */
+    --glue-button-color: #dbdee3;
+}
+
+:root.dark {
+    /* Background */
+    --glue-bg-color: #4b5563;
+    --glue-container-bg-color: #171b23;
+    --glue-container-hover-bg-color: #374151;
+    --glue-switch-bg-color: #171b23;
+
+    /* Text */
+    --glue-text-color: #f9fafb;
+    --glue-subtext-text-color: #9ca3af;
+    --glue-subtext_1-text-color: #9ca3af;
+
+    /* Button */
+    --glue-button-color: #000000;
+
+    /* Border */
+    --glue-container-border-color: #4b5563;
+}

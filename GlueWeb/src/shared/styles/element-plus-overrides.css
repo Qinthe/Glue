@@ -1,0 +1,44 @@
+.el-input {
+  --el-input-height: var(--glue-input-height) !important;
+  --el-input-border-radius: var(--glue-input-border-radius) !important;
+  --el-input-focus-border-color: var(--el-color-primary) !important;
+}
+
+.el-select {
+  --el-select-input-focus-border-color: var(--el-color-primary) !important;
+}
+
+.el-textarea {
+  --el-input-focus-border-color: var(--el-color-primary) !important;
+  --el-input-border-radius: var(--glue-input-border-radius) !important;
+}
+
+.el-tag span {
+  font-size: 10px !important;
+}
+
+.el-drawer {
+  --el-drawer-padding-primary: 20px !important;
+}
+
+.el-table th.el-table__cell {
+  background: #f8fafc !important;
+  color: var(--glue-text-color) !important;
+}
+
+.el-table__row:hover > td.el-table__cell {
+  background: #f8fbff !important;
+}
+
+:root.dark .el-table th.el-table__cell {
+  background: #111827 !important;
+}
+
+.el-input__wrapper,
+.el-select__wrapper {
+  border: 1px solid var(--glue-input-border-color) !important;
+  transition:
+    box-shadow 0.18s ease,
+    border-color 0.18s ease,
+    background-color 0.18s ease !important;
+}

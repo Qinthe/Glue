@@ -1,0 +1,258 @@
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  color: var(--glue-text-color);
+  background: var(--glue-bg-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.canvas__toolbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid var(--glue-border-color);
+}
+
+.canvas__toolbar-main {
+  display: flex;
+  align-items: flex-start;
+}
+
+.canvas__toolbar-main span {
+  height: 42px;
+  line-height: 42px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--glue-text-color);
+}
+
+.canvas__toolbar-main p {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--glue-subtext-text-color);
+}
+
+.canvas__toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--glue-toolbar-gap);
+}
+
+.glue-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.glue-page__content {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.glue-panel {
+  border: 1px solid var(--glue-border-color);
+  border-radius: var(--glue-container-border-radius);
+  background: var(--glue-container-bg-color);
+  overflow: hidden;
+}
+
+.glue-panel__body {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.glue-panel__footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 6px 20px;
+  border-top: 1px solid var(--glue-border-color);
+  background: var(--glue-container-bg-color);
+  flex-shrink: 0;
+}
+
+.glue-scroll-y {
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.glue-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.glue-toolbar-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 42px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;  
+}
+
+.glue-toolbar-line__group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.glue-toolbar-trigger,
+.glue-toolbar-view-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--glue-button-bg-color);
+  color: var(--glue-button-color);
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease;
+}
+
+.glue-toolbar-trigger-badge {
+  display: inline-flex;
+}
+
+.glue-toolbar-trigger-badge :is(.el-badge__content) {
+  border: 0;
+  box-shadow: none;
+  font-size: 11px;
+  font-weight: 700;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 8px;
+  transform: translate(10%, -45%);
+  max-width: none;
+}
+
+.glue-toolbar-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.glue-toolbar-chip--active {
+  color: #2563eb;
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.glue-toolbar-summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.glue-toolbar-summary .el-tag {
+  border: 0;
+  border-radius: 999px;
+  padding: 0 12px;
+}
+
+.glue-toolbar-popover.el-popover {
+  width: min(560px, calc(100vw - 24px)) !important;
+  max-width: calc(100vw - 24px);
+  box-sizing: border-box;
+  padding: 16px;
+  border: 1px solid var(--glue-border-color);
+  border-radius: 16px;
+  background: var(--glue-container-bg-color);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.1);
+}
+
+.glue-toolbar-popover__panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.glue-toolbar-popover__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  align-items: start;
+  min-width: 0;
+}
+
+.glue-toolbar-popover__field {
+  min-width: 0;
+}
+
+.glue-toolbar-popover__field--wide {
+  grid-column: 1 / -1;
+}
+
+.glue-toolbar-popover__field > .el-input,
+.glue-toolbar-popover__field > .el-select,
+.glue-toolbar-popover__field > .el-date-editor {
+  width: 100%;
+  min-width: 0;
+}
+
+.glue-toolbar-popover .el-input__wrapper,
+.glue-toolbar-popover .el-select__wrapper,
+.glue-toolbar-popover .el-date-editor.el-input__wrapper {
+  width: 100%;
+  min-width: 0;
+  min-height: 36px;
+  border-radius: 10px;
+  box-shadow: none;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.glue-toolbar-popover__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .glue-toolbar-line {
+    align-items: flex-start;
+  }
+
+  .glue-toolbar-line__group {
+    width: 100%;
+  }
+
+  .glue-toolbar-popover__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .glue-toolbar-popover__field--wide {
+    grid-column: auto;
+  }
+}

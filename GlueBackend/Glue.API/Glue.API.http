@@ -1,0 +1,6 @@
+@Glue.API_HostAddress = http://localhost:5100
+
+GET {{Glue.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
