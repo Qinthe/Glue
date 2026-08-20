@@ -59,11 +59,11 @@ export const router = createRouter({
  * 从路由 query 中提取登录后应回跳的地址。
  * 只有 query.redirect 是字符串时才使用，否则回到首页。
  */
-// function getRedirectPath(to: RouteLocationNormalized) {
-//   return typeof to.query.redirect === 'string' && to.query.redirect
-//     ? to.query.redirect
-//     : '/'
-// }
+function getRedirectPath(to: RouteLocationNormalized) {
+  return typeof to.query.redirect === 'string' && to.query.redirect
+    ? to.query.redirect
+    : '/'
+}
 
 
 /**
