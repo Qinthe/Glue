@@ -5,6 +5,8 @@ services:
     restart: unless-stopped 
     ports:
       - "127.0.0.1:8100:8080"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     environment:
       ASPNETCORE_ENVIRONMENT: Production
-      GLUE_ConnectionStrings__GlueConnection: "Server=10.0.0.2;Database=glue_db;User=root;Password=Qinth&Password_01;Port=3306;Allow User Variables=true;CharSet=utf8mb4;"
+      ConnectionStrings__GlueConnection: "Server=host.docker.internal;Database=glue_db;User=root;Password=Qinth&Password_01;Port=3306;Allow User Variables=true;CharSet=utf8mb4;"
