@@ -2,10 +2,9 @@ services:
   glue:
     image: hkccr.ccs.tencentyun.com/my_app/glue_app:latest
     container_name: glue
-    restart: unless-stopped
-    network_mode: host 
-    # ports:
-    #   - "127.0.0.1:8100:8080"
+    restart: unless-stopped 
+    ports:
+      - "127.0.0.1:8100:8080"
     environment:
       ASPNETCORE_ENVIRONMENT: Production
       GLUE_ConnectionStrings__GlueConnection: "Server=10.0.0.2;Database=glue_db;User=root;Password=Qinth&Password_01;Port=3306;Allow User Variables=true;CharSet=utf8mb4;"
